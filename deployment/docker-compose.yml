@@ -1,0 +1,33 @@
+# Déploiement dans la VM Vagrant : utilise UNIQUEMENT les images publiées sur Docker Hub
+# (aucun build local). Lancement :
+#   cd /vagrant/deployment && docker compose pull && docker compose up -d
+services:
+  backend:
+    image: ${DOCKERHUB_USER}/garderie-backend:${IMAGE_TAG:-latest}
+    container_name: garderie-backend
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+    ports:
+      - "5000:5000"
+    networks:
+      - garderie-net
+    restart: always
+
+  frontend:
+    image: ${DOCKERHUB_USER}/garderie-frontend:${IMAGE_TAG:-latest}
+    container_name: garderie-frontend
+    environment:
+      - NODE_ENV=production
+      - BACKEND_URL=http://backend:5000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - garderie-net
+    restart: always
+
+networks:
+  garderie-net:
+    driver: bridge
