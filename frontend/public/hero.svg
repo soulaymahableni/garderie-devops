@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-label="Enfants qui jouent">
+  <rect width="400" height="320" rx="28" fill="#ffffff"/>
+  <circle cx="330" cy="70" r="34" fill="#ffd166"/>
+  <path d="M0 250 Q100 200 200 240 T400 230 V320 H0Z" fill="#9fdcc9"/>
+  <!-- maison -->
+  <rect x="40" y="140" width="110" height="100" fill="#ff7a59"/>
+  <polygon points="30,145 95,90 160,145" fill="#e8603e"/>
+  <rect x="80" y="190" width="30" height="50" fill="#fff1e8"/>
+  <rect x="55" y="160" width="22" height="22" fill="#fff1e8"/>
+  <rect x="115" y="160" width="22" height="22" fill="#fff1e8"/>
+  <!-- enfant 1 -->
+  <circle cx="230" cy="170" r="16" fill="#f4c7a1"/>
+  <rect x="216" y="186" width="28" height="40" rx="10" fill="#4cb5ae"/>
+  <rect x="219" y="224" width="8" height="22" fill="#2f2a3b"/>
+  <rect x="233" y="224" width="8" height="22" fill="#2f2a3b"/>
+  <!-- enfant 2 -->
+  <circle cx="300" cy="180" r="14" fill="#c98f6b"/>
+  <rect x="288" y="194" width="24" height="34" rx="9" fill="#ff7a59"/>
+  <rect x="290" y="226" width="7" height="20" fill="#2f2a3b"/>
+  <rect x="303" y="226" width="7" height="20" fill="#2f2a3b"/>
+  <!-- ballon -->
+  <circle cx="265" cy="238" r="10" fill="#ffd166" stroke="#e8603e" stroke-width="2"/>
+  <!-- cubes -->
+  <rect x="330" y="225" width="22" height="22" fill="#7b6cf6"/>
+  <rect x="352" y="225" width="22" height="22" fill="#4cb5ae"/>
+  <rect x="341" y="203" width="22" height="22" fill="#ff7a59"/>
+</svg>
