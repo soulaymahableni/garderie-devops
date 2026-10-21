@@ -172,3 +172,22 @@ curl http://localhost:5000/api/activites
 
 ### 6. Application accessible depuis une autre machine
 ![Application dans le navigateur](screenshots/app-navigateur.png)
+
+---
+
+## 9. Exécution manuelle d'Ansible (inventaire `hosts.ini`)
+
+Inventaire `ansible/inventory/hosts.ini` :
+```ini
+[web]
+garderie-vm ansible_host=192.168.56.10 ansible_user=vagrant ansible_python_interpreter=/usr/bin/python3
+```
+
+Commandes (depuis le dossier `ansible/`) :
+```bash
+ansible -i inventory/hosts.ini web -m ping --private-key ../.vagrant/machines/default/virtualbox/private_key
+ansible-playbook -i inventory/hosts.ini site.yml --private-key ../.vagrant/machines/default/virtualbox/private_key
+```
+
+La clé privée est passée en ligne de commande et n'est pas versionnée dans le dépôt.
+Une seconde exécution donne `changed=0`, ce qui montre que le rôle est idempotent.
