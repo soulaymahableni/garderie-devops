@@ -1,0 +1,7 @@
+---
+- name: Provisioning de la VM Ma Garderie
+  hosts: all
+  become: true
+
+  roles:
+    - docker

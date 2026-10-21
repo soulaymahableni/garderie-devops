@@ -1,0 +1,3 @@
+---
+# Utilisateur autorisé à exécuter Docker sans sudo
+deploy_user: vagrant
